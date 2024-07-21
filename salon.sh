@@ -9,9 +9,7 @@ MAIN_MENU() {
   then
     echo -e "\n$1"
   fi
-
   SERVICES=$($PSQL "SELECT service_id, name FROM services ORDER BY service_id")
-
   if [[ -z $SERVICES ]]
   then
     echo "Sorry, we don't have any service right now"
